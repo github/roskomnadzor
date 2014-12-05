@@ -1,0 +1,78 @@
+$ echo | openssl s_client -connect 192.30.252.131:443 -showcerts
+CONNECTED(00000003)
+depth=0 businessCategory = Private Organization, 1.3.6.1.4.1.311.60.2.1.3 = US, 1.3.6.1.4.1.311.60.2.1.2 = Delaware, serialNumber = 5157550, street = 548 4th Street, postalCode = 94107, C = US, ST = California, L = San Francisco, O = "GitHub, Inc.", CN = github.com
+verify error:num=20:unable to get local issuer certificate
+verify return:1
+depth=0 businessCategory = Private Organization, 1.3.6.1.4.1.311.60.2.1.3 = US, 1.3.6.1.4.1.311.60.2.1.2 = Delaware, serialNumber = 5157550, street = 548 4th Street, postalCode = 94107, C = US, ST = California, L = San Francisco, O = "GitHub, Inc.", CN = github.com
+verify error:num=27:certificate not trusted
+verify return:1
+depth=0 businessCategory = Private Organization, 1.3.6.1.4.1.311.60.2.1.3 = US, 1.3.6.1.4.1.311.60.2.1.2 = Delaware, serialNumber = 5157550, street = 548 4th Street, postalCode = 94107, C = US, ST = California, L = San Francisco, O = "GitHub, Inc.", CN = github.com
+verify error:num=21:unable to verify the first certificate
+verify return:1
+---
+Certificate chain
+ 0 s:/businessCategory=Private Organization/1.3.6.1.4.1.311.60.2.1.3=US/1.3.6.1.4.1.311.60.2.1.2=Delaware/serialNumber=5157550/street=548 4th Street/postalCode=94107/C=US/ST=California/L=San Francisco/O=GitHub, Inc./CN=github.com
+   i:/C=RU/ST=Moscow/O= /OU= /CN= /emailAddress= 
+-----BEGIN CERTIFICATE-----
+MIIDNDCCAp2gAwIBAgIUJU621YW5qXzUyvb/p3cQe3DNZzAwDQYJKoZIhvcNAQEF
+BQAwVDELMAkGA1UEBhMCUlUxDzANBgNVBAgMBk1vc2NvdzEKMAgGA1UECgwBIDEK
+MAgGA1UECwwBIDEKMAgGA1UEAwwBIDEQMA4GCSqGSIb3DQEJARYBIDAeFw0xNDA0
+MDgwMDAwMDBaFw0xNjA0MTIxMjAwMDBaMIHwMR0wGwYDVQQPDBRQcml2YXRlIE9y
+Z2FuaXphdGlvbjETMBEGCysGAQQBgjc8AgEDEwJVUzEZMBcGCysGAQQBgjc8AgEC
+EwhEZWxhd2FyZTEQMA4GA1UEBRMHNTE1NzU1MDEXMBUGA1UECRMONTQ4IDR0aCBT
+dHJlZXQxDjAMBgNVBBETBTk0MTA3MQswCQYDVQQGEwJVUzETMBEGA1UECBMKQ2Fs
+aWZvcm5pYTEWMBQGA1UEBxMNU2FuIEZyYW5jaXNjbzEVMBMGA1UEChMMR2l0SHVi
+LCBJbmMuMRMwEQYDVQQDEwpnaXRodWIuY29tMIGfMA0GCSqGSIb3DQEBAQUAA4GN
+ADCBiQKBgQC+BKiYAgmwo/I7Yq7gGtGLCm9n+UVqD8/H9mFgb0tBT92ienkFzGMr
+F0gUAT2QOqa3o38XLJeePMitF8VKPnb5k79hBM9xn9Czs8XAB2rjVgfQtgFqNXlH
+Pvws0UrBSCDqQJG+Hn3mLI38msNPiMD6e1NJ2cTUDro3vhGLan31bQIDAQABo2Yw
+ZDAlBgNVHREEHjAcggpnaXRodWIuY29tgg53d3cuZ2l0aHViLmNvbTAOBgNVHQ8B
+Af8EBAMCBaAwHQYDVR0lBBYwFAYIKwYBBQUHAwEGCCsGAQUFBwMCMAwGA1UdEwEB
+/wQCMAAwDQYJKoZIhvcNAQEFBQADgYEAOlHwD649dHm6H+u1339e5tRQUtdlViE5
+wV7Brxbi6mU/S1y7r8yQELKw7J4vjt8INyDXcdwBedDSWVSOyMYwRjYsttdyUKvo
+pwu+9c4mWIh2YdQpRSSExpjmTfN27en0DLKNihEVEJyffXEB7CQS/d5IgfDtIkI3
+7kpMkZqEr7Y=
+-----END CERTIFICATE-----
+---
+Server certificate
+subject=/businessCategory=Private Organization/1.3.6.1.4.1.311.60.2.1.3=US/1.3.6.1.4.1.311.60.2.1.2=Delaware/serialNumber=5157550/street=548 4th Street/postalCode=94107/C=US/ST=California/L=San Francisco/O=GitHub, Inc./CN=github.com
+issuer=/C=RU/ST=Moscow/O= /OU= /CN= /emailAddress= 
+---
+No client certificate CA names sent
+---
+SSL handshake has read 1137 bytes and written 495 bytes
+---
+New, TLSv1/SSLv3, Cipher is AES256-GCM-SHA384
+Server public key is 1024 bit
+Secure Renegotiation IS supported
+Compression: NONE
+Expansion: NONE
+SSL-Session:
+    Protocol  : TLSv1.2
+    Cipher    : AES256-GCM-SHA384
+    Session-ID: 7D8B53606E85C48ED539B100B50C5BCE6F03B044EC1B4F3D7B474EF28FB0BE92
+    Session-ID-ctx: 
+    Master-Key: 7AC7AA57051900F611A694715593A343F9EB199EC519A1F4D5FC66C82F66CBB26DB974E2EA3CD03997BA9F853E8A7D17
+    Key-Arg   : None
+    PSK identity: None
+    PSK identity hint: None
+    SRP username: None
+    TLS session ticket lifetime hint: 300 (seconds)
+    TLS session ticket:
+    0000 - 97 b9 50 db e4 60 80 b8-30 b8 f4 07 a8 6b 3a 1e   ..P..`..0....k:.
+    0010 - 80 cf 8e 57 77 99 b4 28-34 72 99 65 44 d9 3c 6c   ...Ww..(4r.eD.<l
+    0020 - e0 37 b4 17 f3 2b f0 db-6f f4 b1 10 34 d3 3c 08   .7...+..o...4.<.
+    0030 - 55 e4 2f d2 3f 61 c7 a6-92 2d dd 6d 3f aa c6 f9   U./.?a...-.m?...
+    0040 - 01 e5 2d cf 64 2a 9c b0-a6 bc c3 25 2e 07 45 04   ..-.d*.....%..E.
+    0050 - ea f1 02 69 67 ce 63 d3-02 b0 99 2d 39 17 a0 10   ...ig.c....-9...
+    0060 - 0f 99 ad ec 43 14 c4 6e-37 b6 43 57 1e cc ad 40   ....C..n7.CW...@
+    0070 - 35 ef 61 e4 c3 61 df d9-e4 cf 8e a1 3b e0 5b da   5.a..a......;.[.
+    0080 - 19 8d 09 8b d2 26 e8 02-a9 e6 c2 27 0a 61 a4 22   .....&.....'.a."
+    0090 - ed 83 72 a4 dc c0 ff e2-e7 f0 67 f8 e6 14 64 38   ..r.......g...d8
+
+    Start Time: 1417776102
+    Timeout   : 300 (sec)
+    Verify return code: 21 (unable to verify the first certificate)
+---
+DONE
+
